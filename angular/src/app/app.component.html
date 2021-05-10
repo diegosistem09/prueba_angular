@@ -1,0 +1,29 @@
+
+<label>Listado HEROES</label>
+<div class="container">
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <input class="form-controller" placeholder="Search..."[(ngModel)]="filterPost" name="filterpost">
+    </div>    
+  </div> 
+  
+  <div class="navbar-collapse gallery">           
+    <ul>          
+      <li *ngFor="let row of respuesta | filter:filterPost |  slice:0:10">
+        <div class="card-container"> 
+              <div class="card"  style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{row.name}}</h5>
+                  <p class="card-text">{{row.slug}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>  
+        </li>  
+      </ul>
+        
+  </div>
+
+
+</div>
